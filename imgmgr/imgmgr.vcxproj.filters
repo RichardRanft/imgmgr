@@ -1,0 +1,647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Lua">
+      <UniqueIdentifier>{72201091-c5ba-4ff6-9f26-0617482d160d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lua\headers">
+      <UniqueIdentifier>{a58b5308-6d1a-4027-b76b-5643ab3c4ab8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lpng">
+      <UniqueIdentifier>{968e0bbe-ea36-48bf-b6c0-3e9132507199}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ljpeg">
+      <UniqueIdentifier>{c79ffcc6-76cf-4fec-a120-06562fe055a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zlib">
+      <UniqueIdentifier>{ca8a322d-048c-4858-971e-2266b53266c2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\lapi.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\lauxlib.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\lcode.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\lctype.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\ldebug.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\ldo.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\lfunc.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\lgc.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\llex.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\llimits.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\lmem.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\lobject.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\lopcodes.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\lparser.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\lstate.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\lstring.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\ltable.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\ltm.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\lua.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\lua.hpp">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\luaconf.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\lualib.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\lundump.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\lvm.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua\lzio.h">
+      <Filter>Lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="luna.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaFileSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lpng\pngstruct.h">
+      <Filter>lpng</Filter>
+    </ClInclude>
+    <ClInclude Include="lpng\png.h">
+      <Filter>lpng</Filter>
+    </ClInclude>
+    <ClInclude Include="lpng\pngconf.h">
+      <Filter>lpng</Filter>
+    </ClInclude>
+    <ClInclude Include="lpng\pngdebug.h">
+      <Filter>lpng</Filter>
+    </ClInclude>
+    <ClInclude Include="lpng\pnginfo.h">
+      <Filter>lpng</Filter>
+    </ClInclude>
+    <ClInclude Include="lpng\pnglibconf.h">
+      <Filter>lpng</Filter>
+    </ClInclude>
+    <ClInclude Include="lpng\pngpriv.h">
+      <Filter>lpng</Filter>
+    </ClInclude>
+    <ClInclude Include="ljpeg\jchuff.h">
+      <Filter>ljpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ljpeg\jconfig.cw.mac.h">
+      <Filter>ljpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ljpeg\jconfig.cw.win.h">
+      <Filter>ljpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ljpeg\jconfig.gcc.linux.h">
+      <Filter>ljpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ljpeg\jconfig.h">
+      <Filter>ljpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ljpeg\jconfig.vc.win.h">
+      <Filter>ljpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ljpeg\jdct.h">
+      <Filter>ljpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ljpeg\jdhuff.h">
+      <Filter>ljpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ljpeg\jerror.h">
+      <Filter>ljpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ljpeg\jinclude.h">
+      <Filter>ljpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ljpeg\jmemsys.h">
+      <Filter>ljpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ljpeg\jmorecfg.h">
+      <Filter>ljpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ljpeg\jpegint.h">
+      <Filter>ljpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ljpeg\jpeglib.h">
+      <Filter>ljpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ljpeg\jversion.h">
+      <Filter>ljpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\crc32.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\deflate.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\gzguts.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\inffast.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\inffixed.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\inflate.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\inftrees.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\trees.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zconf.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zlib.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zutil.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="ljpeg\extras\cdjpeg.h">
+      <Filter>ljpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ljpeg\extras\transupp.h">
+      <Filter>ljpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JPEGFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PNGFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BMPFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceInstance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyTemplate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugOutput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imgmgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lapi.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lauxlib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lbaselib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lbitlib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lcode.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lcorolib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lctype.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\ldblib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\ldebug.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\ldo.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\ldump.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lfunc.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lgc.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\linit.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\liolib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\llex.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lmathlib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lmem.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\loadlib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lobject.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lopcodes.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\loslib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lparser.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lstate.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lstring.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lstrlib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\ltable.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\ltablib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\ltm.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lua.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\luac.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lundump.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lvm.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\lzio.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaFileSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lpng\png.c">
+      <Filter>lpng</Filter>
+    </ClCompile>
+    <ClCompile Include="lpng\pngerror.c">
+      <Filter>lpng</Filter>
+    </ClCompile>
+    <ClCompile Include="lpng\pngget.c">
+      <Filter>lpng</Filter>
+    </ClCompile>
+    <ClCompile Include="lpng\pngmem.c">
+      <Filter>lpng</Filter>
+    </ClCompile>
+    <ClCompile Include="lpng\pngpread.c">
+      <Filter>lpng</Filter>
+    </ClCompile>
+    <ClCompile Include="lpng\pngread.c">
+      <Filter>lpng</Filter>
+    </ClCompile>
+    <ClCompile Include="lpng\pngrio.c">
+      <Filter>lpng</Filter>
+    </ClCompile>
+    <ClCompile Include="lpng\pngrtran.c">
+      <Filter>lpng</Filter>
+    </ClCompile>
+    <ClCompile Include="lpng\pngrutil.c">
+      <Filter>lpng</Filter>
+    </ClCompile>
+    <ClCompile Include="lpng\pngset.c">
+      <Filter>lpng</Filter>
+    </ClCompile>
+    <ClCompile Include="lpng\pngtrans.c">
+      <Filter>lpng</Filter>
+    </ClCompile>
+    <ClCompile Include="lpng\pngwio.c">
+      <Filter>lpng</Filter>
+    </ClCompile>
+    <ClCompile Include="lpng\pngwrite.c">
+      <Filter>lpng</Filter>
+    </ClCompile>
+    <ClCompile Include="lpng\pngwtran.c">
+      <Filter>lpng</Filter>
+    </ClCompile>
+    <ClCompile Include="lpng\pngwutil.c">
+      <Filter>lpng</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jcapimin.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jcapistd.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jccoefct.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jccolor.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jcdctmgr.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jchuff.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jcinit.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jcmainct.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jcmarker.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jcmaster.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jcomapi.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jcparam.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jcphuff.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jcprepct.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jcsample.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jctrans.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jdapimin.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jdapistd.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jdatadst.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jdatasrc.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jdcoefct.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jdcolor.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jddctmgr.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jdhuff.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jdinput.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jdmainct.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jdmarker.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jdmaster.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jdmerge.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jdphuff.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jdpostct.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jdsample.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jdtrans.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jerror.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jfdctflt.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jfdctfst.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jfdctint.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jidctflt.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jidctfst.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jidctint.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jidctred.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jmemansi.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jmemdos.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jmemmac.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jmemmgr.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jpegtran.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jquant1.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jquant2.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\jutils.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\adler32.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\compress.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\crc32.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\deflate.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\gzclose.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\gzlib.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\gzread.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\gzwrite.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\infback.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\inffast.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\inflate.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\inftrees.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\trees.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\uncompr.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="zlib\zutil.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\extras\cdjpeg.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ljpeg\extras\transupp.c">
+      <Filter>ljpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="JPEGFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PNGFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BMPFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceInstance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugOutput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Lua\Makefile">
+      <Filter>Lua</Filter>
+    </None>
+  </ItemGroup>
+</Project>

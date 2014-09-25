@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4093755E-7930-4796-9FD1-4594CC5149DB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>imgmgr</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAsManaged>false</CompileAsManaged>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="BMPFile.h" />
+    <ClInclude Include="DebugOutput.h" />
+    <ClInclude Include="JPEGFile.h" />
+    <ClInclude Include="ljpeg\extras\cdjpeg.h" />
+    <ClInclude Include="ljpeg\extras\transupp.h" />
+    <ClInclude Include="ljpeg\jchuff.h" />
+    <ClInclude Include="ljpeg\jconfig.cw.mac.h" />
+    <ClInclude Include="ljpeg\jconfig.cw.win.h" />
+    <ClInclude Include="ljpeg\jconfig.gcc.linux.h" />
+    <ClInclude Include="ljpeg\jconfig.h" />
+    <ClInclude Include="ljpeg\jconfig.vc.win.h" />
+    <ClInclude Include="ljpeg\jdct.h" />
+    <ClInclude Include="ljpeg\jdhuff.h" />
+    <ClInclude Include="ljpeg\jerror.h" />
+    <ClInclude Include="ljpeg\jinclude.h" />
+    <ClInclude Include="ljpeg\jmemsys.h" />
+    <ClInclude Include="ljpeg\jmorecfg.h" />
+    <ClInclude Include="ljpeg\jpegint.h" />
+    <ClInclude Include="ljpeg\jpeglib.h" />
+    <ClInclude Include="ljpeg\jversion.h" />
+    <ClInclude Include="lpng\png.h" />
+    <ClInclude Include="lpng\pngconf.h" />
+    <ClInclude Include="lpng\pngdebug.h" />
+    <ClInclude Include="lpng\pnginfo.h" />
+    <ClInclude Include="lpng\pnglibconf.h" />
+    <ClInclude Include="lpng\pngpriv.h" />
+    <ClInclude Include="lpng\pngstruct.h" />
+    <ClInclude Include="LuaFileSystem.h" />
+    <ClInclude Include="Lua\lapi.h" />
+    <ClInclude Include="Lua\lauxlib.h" />
+    <ClInclude Include="Lua\lcode.h" />
+    <ClInclude Include="Lua\lctype.h" />
+    <ClInclude Include="Lua\ldebug.h" />
+    <ClInclude Include="Lua\ldo.h" />
+    <ClInclude Include="Lua\lfunc.h" />
+    <ClInclude Include="Lua\lgc.h" />
+    <ClInclude Include="Lua\llex.h" />
+    <ClInclude Include="Lua\llimits.h" />
+    <ClInclude Include="Lua\lmem.h" />
+    <ClInclude Include="Lua\lobject.h" />
+    <ClInclude Include="Lua\lopcodes.h" />
+    <ClInclude Include="Lua\lparser.h" />
+    <ClInclude Include="Lua\lstate.h" />
+    <ClInclude Include="Lua\lstring.h" />
+    <ClInclude Include="Lua\ltable.h" />
+    <ClInclude Include="Lua\ltm.h" />
+    <ClInclude Include="Lua\lua.h" />
+    <ClInclude Include="Lua\lua.hpp" />
+    <ClInclude Include="Lua\luaconf.h" />
+    <ClInclude Include="Lua\lualib.h" />
+    <ClInclude Include="Lua\lundump.h" />
+    <ClInclude Include="Lua\lvm.h" />
+    <ClInclude Include="Lua\lzio.h" />
+    <ClInclude Include="luna.h" />
+    <ClInclude Include="PNGFile.h" />
+    <ClInclude Include="PropertyTemplate.h" />
+    <ClInclude Include="ResourceFactory.h" />
+    <ClInclude Include="ResourceInstance.h" />
+    <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="zlib\crc32.h" />
+    <ClInclude Include="zlib\deflate.h" />
+    <ClInclude Include="zlib\gzguts.h" />
+    <ClInclude Include="zlib\inffast.h" />
+    <ClInclude Include="zlib\inffixed.h" />
+    <ClInclude Include="zlib\inflate.h" />
+    <ClInclude Include="zlib\inftrees.h" />
+    <ClInclude Include="zlib\trees.h" />
+    <ClInclude Include="zlib\zconf.h" />
+    <ClInclude Include="zlib\zlib.h" />
+    <ClInclude Include="zlib\zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="BMPFile.cpp" />
+    <ClCompile Include="DebugOutput.cpp" />
+    <ClCompile Include="imgmgr.cpp" />
+    <ClCompile Include="JPEGFile.cpp" />
+    <ClCompile Include="ljpeg\extras\cdjpeg.c" />
+    <ClCompile Include="ljpeg\extras\transupp.c" />
+    <ClCompile Include="ljpeg\jcapimin.c" />
+    <ClCompile Include="ljpeg\jcapistd.c" />
+    <ClCompile Include="ljpeg\jccoefct.c" />
+    <ClCompile Include="ljpeg\jccolor.c" />
+    <ClCompile Include="ljpeg\jcdctmgr.c" />
+    <ClCompile Include="ljpeg\jchuff.c" />
+    <ClCompile Include="ljpeg\jcinit.c" />
+    <ClCompile Include="ljpeg\jcmainct.c" />
+    <ClCompile Include="ljpeg\jcmarker.c" />
+    <ClCompile Include="ljpeg\jcmaster.c" />
+    <ClCompile Include="ljpeg\jcomapi.c" />
+    <ClCompile Include="ljpeg\jcparam.c" />
+    <ClCompile Include="ljpeg\jcphuff.c" />
+    <ClCompile Include="ljpeg\jcprepct.c" />
+    <ClCompile Include="ljpeg\jcsample.c" />
+    <ClCompile Include="ljpeg\jctrans.c" />
+    <ClCompile Include="ljpeg\jdapimin.c" />
+    <ClCompile Include="ljpeg\jdapistd.c" />
+    <ClCompile Include="ljpeg\jdatadst.c" />
+    <ClCompile Include="ljpeg\jdatasrc.c" />
+    <ClCompile Include="ljpeg\jdcoefct.c" />
+    <ClCompile Include="ljpeg\jdcolor.c" />
+    <ClCompile Include="ljpeg\jddctmgr.c" />
+    <ClCompile Include="ljpeg\jdhuff.c" />
+    <ClCompile Include="ljpeg\jdinput.c" />
+    <ClCompile Include="ljpeg\jdmainct.c" />
+    <ClCompile Include="ljpeg\jdmarker.c" />
+    <ClCompile Include="ljpeg\jdmaster.c" />
+    <ClCompile Include="ljpeg\jdmerge.c" />
+    <ClCompile Include="ljpeg\jdphuff.c" />
+    <ClCompile Include="ljpeg\jdpostct.c" />
+    <ClCompile Include="ljpeg\jdsample.c" />
+    <ClCompile Include="ljpeg\jdtrans.c" />
+    <ClCompile Include="ljpeg\jerror.c" />
+    <ClCompile Include="ljpeg\jfdctflt.c" />
+    <ClCompile Include="ljpeg\jfdctfst.c" />
+    <ClCompile Include="ljpeg\jfdctint.c" />
+    <ClCompile Include="ljpeg\jidctflt.c" />
+    <ClCompile Include="ljpeg\jidctfst.c" />
+    <ClCompile Include="ljpeg\jidctint.c" />
+    <ClCompile Include="ljpeg\jidctred.c" />
+    <ClCompile Include="ljpeg\jmemansi.c" />
+    <ClCompile Include="ljpeg\jmemdos.c" />
+    <ClCompile Include="ljpeg\jmemmac.c" />
+    <ClCompile Include="ljpeg\jmemmgr.c" />
+    <ClCompile Include="ljpeg\jpegtran.c" />
+    <ClCompile Include="ljpeg\jquant1.c" />
+    <ClCompile Include="ljpeg\jquant2.c" />
+    <ClCompile Include="ljpeg\jutils.c" />
+    <ClCompile Include="lpng\png.c" />
+    <ClCompile Include="lpng\pngerror.c" />
+    <ClCompile Include="lpng\pngget.c" />
+    <ClCompile Include="lpng\pngmem.c" />
+    <ClCompile Include="lpng\pngpread.c" />
+    <ClCompile Include="lpng\pngread.c" />
+    <ClCompile Include="lpng\pngrio.c" />
+    <ClCompile Include="lpng\pngrtran.c" />
+    <ClCompile Include="lpng\pngrutil.c" />
+    <ClCompile Include="lpng\pngset.c" />
+    <ClCompile Include="lpng\pngtrans.c" />
+    <ClCompile Include="lpng\pngwio.c" />
+    <ClCompile Include="lpng\pngwrite.c" />
+    <ClCompile Include="lpng\pngwtran.c" />
+    <ClCompile Include="lpng\pngwutil.c" />
+    <ClCompile Include="LuaFileSystem.cpp" />
+    <ClCompile Include="Lua\lapi.c" />
+    <ClCompile Include="Lua\lauxlib.c" />
+    <ClCompile Include="Lua\lbaselib.c" />
+    <ClCompile Include="Lua\lbitlib.c" />
+    <ClCompile Include="Lua\lcode.c" />
+    <ClCompile Include="Lua\lcorolib.c" />
+    <ClCompile Include="Lua\lctype.c" />
+    <ClCompile Include="Lua\ldblib.c" />
+    <ClCompile Include="Lua\ldebug.c" />
+    <ClCompile Include="Lua\ldo.c" />
+    <ClCompile Include="Lua\ldump.c" />
+    <ClCompile Include="Lua\lfunc.c" />
+    <ClCompile Include="Lua\lgc.c" />
+    <ClCompile Include="Lua\linit.c" />
+    <ClCompile Include="Lua\liolib.c" />
+    <ClCompile Include="Lua\llex.c" />
+    <ClCompile Include="Lua\lmathlib.c" />
+    <ClCompile Include="Lua\lmem.c" />
+    <ClCompile Include="Lua\loadlib.c" />
+    <ClCompile Include="Lua\lobject.c" />
+    <ClCompile Include="Lua\lopcodes.c" />
+    <ClCompile Include="Lua\loslib.c" />
+    <ClCompile Include="Lua\lparser.c" />
+    <ClCompile Include="Lua\lstate.c" />
+    <ClCompile Include="Lua\lstring.c" />
+    <ClCompile Include="Lua\lstrlib.c" />
+    <ClCompile Include="Lua\ltable.c" />
+    <ClCompile Include="Lua\ltablib.c" />
+    <ClCompile Include="Lua\ltm.c" />
+    <ClCompile Include="Lua\lua.c" />
+    <ClCompile Include="Lua\luac.c" />
+    <ClCompile Include="Lua\lundump.c" />
+    <ClCompile Include="Lua\lvm.c" />
+    <ClCompile Include="Lua\lzio.c" />
+    <ClCompile Include="PNGFile.cpp" />
+    <ClCompile Include="ResourceFactory.cpp" />
+    <ClCompile Include="ResourceInstance.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="zlib\adler32.c" />
+    <ClCompile Include="zlib\compress.c" />
+    <ClCompile Include="zlib\crc32.c" />
+    <ClCompile Include="zlib\deflate.c" />
+    <ClCompile Include="zlib\gzclose.c" />
+    <ClCompile Include="zlib\gzlib.c" />
+    <ClCompile Include="zlib\gzread.c" />
+    <ClCompile Include="zlib\gzwrite.c" />
+    <ClCompile Include="zlib\infback.c" />
+    <ClCompile Include="zlib\inffast.c" />
+    <ClCompile Include="zlib\inflate.c" />
+    <ClCompile Include="zlib\inftrees.c" />
+    <ClCompile Include="zlib\trees.c" />
+    <ClCompile Include="zlib\uncompr.c" />
+    <ClCompile Include="zlib\zutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Lua\Makefile" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
