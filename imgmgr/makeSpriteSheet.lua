@@ -120,7 +120,7 @@ animTable[1] = "<AnimationAsset\n";
 animTable[2] = "    AssetName=\"spriteSheetAnim\"\n";
 animTable[3] = "    Image=\"@asset=ToyAssets:spriteSheet\"\n";
 animTable[4] = "    AnimationFrames=\"" .. frames .. "\"\n";
-animTable[5] = "    AnimationTime=\"2\" />\"\n";
+animTable[5] = "    AnimationTime=\"2\" />\n";
 
 TAMLOut = io.open("spriteSheetAnim.asset.taml", "w+");
 if TAMLOut ~= nil then
