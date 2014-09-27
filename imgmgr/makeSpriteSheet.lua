@@ -38,14 +38,13 @@ function getGeometry(numCells)
 	local temp = math.floor(cellBy);
 	local test = cellBy - temp;
 	if test > 0 then
-		xCount = math.floor(cellBy);
-		yCount = math.floor(cellBy);
-	else
 		xCount = math.floor(cellBy) + 1;
 		yCount = math.floor(cellBy) + 1;
+	else
+		xCount = math.floor(cellBy);
+		yCount = math.floor(cellBy);
 	end
-	local geometryStr = " -geometry +" .. xCount .. "+".. yCount;
-	return geometryStr;
+	return xCount, yCount;
 end
 
 function createImageList()
@@ -77,10 +76,10 @@ end
 ImageList = createImageList();
 print(" -- Image list length: " .. tablelen(ImageList));
 loadImages(ImageList);
+ResMan:dumpResourceList();
 print(" -- determinging geometry...");
-geom = getGeometry(tablelen(ImageList));
-command = "montage" .. geom;
-print(command);
+command = "montage -geometry +0+0";
+
 for i = 0, tablelen(ImageList) do
 	if ImageList[i] ~= nil then
 		command = command .. " " .. ImageList[i];
@@ -89,3 +88,45 @@ end
 command = command .. " spriteSheet.png";
 print(command);
 os.execute(command);
+
+width, height = ResMan:getImageInfo(ImageList[0]);
+xCells, yCells = getGeometry(tablelen(ImageList));
+
+assetTable = {};
+assetTable[1] = "<ImageAsset\n";
+assetTable[2] = "    AssetName=\"spriteSheet\"\n";
+assetTable[3] = "    ImageFile=\"spriteSheet.png\"\n";
+assetTable[4] = "    CellCountX=\"" .. xCells .. "\"\n";
+assetTable[5] = "    CellCountY=\"" .. yCells .. "\"\n";
+assetTable[6] = "    CellWidth=\"" .. width .. "\"\n";
+assetTable[7] = "    CellHeight=\"" .. height .. "\" />\"\n";
+
+TAMLOut = io.open("spriteSheet.asset.taml", "w+");
+if TAMLOut ~= nil then
+	for i = 1, tablelen(assetTable) do
+		TAMLOut:write(assetTable[i]);
+	end
+	TAMLOut:flush();
+	TAMLOut:close();
+end
+
+frames = "0";
+for i = 1, (tablelen(ImageList) - 1) do
+	frames = frames .. " " .. i;
+end
+
+animTable = {};
+animTable[1] = "<AnimationAsset\n";
+animTable[2] = "    AssetName=\"spriteSheetAnim\"\n";
+animTable[3] = "    Image=\"@asset=ToyAssets:spriteSheet\"\n";
+animTable[4] = "    AnimationFrames=\"" .. frames .. "\"\n";
+animTable[5] = "    AnimationTime=\"2\" />\"\n";
+
+TAMLOut = io.open("spriteSheetAnim.asset.taml", "w+");
+if TAMLOut ~= nil then
+	for i = 1, tablelen(animTable) do
+		TAMLOut:write(animTable[i]);
+	end
+	TAMLOut:flush();
+	TAMLOut:close();
+end
