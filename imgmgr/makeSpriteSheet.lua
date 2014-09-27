@@ -99,7 +99,7 @@ assetTable[3] = "    ImageFile=\"spriteSheet.png\"\n";
 assetTable[4] = "    CellCountX=\"" .. xCells .. "\"\n";
 assetTable[5] = "    CellCountY=\"" .. yCells .. "\"\n";
 assetTable[6] = "    CellWidth=\"" .. width .. "\"\n";
-assetTable[7] = "    CellHeight=\"" .. height .. "\" />\"\n";
+assetTable[7] = "    CellHeight=\"" .. height .. "\" />\n";
 
 TAMLOut = io.open("spriteSheet.asset.taml", "w+");
 if TAMLOut ~= nil then
