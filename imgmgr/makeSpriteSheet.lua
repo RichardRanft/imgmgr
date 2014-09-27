@@ -10,7 +10,7 @@ print(" -- Creating file manager");
 IOMan = CLuaFileSystem();
 
 function getDirs()
-	print(" -- get directory listing");
+	--print(" -- get directory listing");
 	local list = IOMan:getDirList("");
 	if tablelen(list) > 0 then
 		return list;
@@ -21,7 +21,7 @@ function getDirs()
 end
 
 function getFiles(filter)
-	print(" -- get file listing " .. filter);
+	--print(" -- get file listing " .. filter);
 	local list = IOMan:getFileList(filter);
 	if tablelen(list) > 0 then
 		return list;
