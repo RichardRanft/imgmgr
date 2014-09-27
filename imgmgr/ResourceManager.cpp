@@ -107,10 +107,9 @@ int CResourceManager::dumpResourceList(lua_State* L)
 	{
 		string tempname;
 		lua_newtable(L);
-		unordered_map<string, CResourceInstance*>::iterator it;
-		for (it = m_AssetList->begin(); it != m_AssetList->end(); it++)
+		for (unordered_map<string, CResourceInstance*>::iterator it = m_AssetList->begin(); it != m_AssetList->end(); it++)
 		{
-			tempname = it->first;
+			tempname = (*it).first;
 			//cout << " ** asset " << count << " : " << tempname << " dumped" << endl;
 			lua_pushnumber(L, count++);
 			lua_pushstring(L, (char*)tempname.c_str());

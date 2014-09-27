@@ -31,7 +31,7 @@ public:
 	virtual bool loadAsset(string& fileName);
 
 	PROPERTY_GET_SET(CResourceInstance, Filename, const string&);
-	PROPERTY_GET(CResourceInstance, ImageProperties, const SImageProperties&)
+	PROPERTY_GET(CResourceInstance, ImageProperties, const SImageProperties&);
 
 protected:
 	SImageProperties m_properties;
