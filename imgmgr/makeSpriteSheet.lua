@@ -74,10 +74,10 @@ function loadImages(list)
 end
 
 ImageList = createImageList();
-print(" -- Image list length: " .. tablelen(ImageList));
+print(" -- image list length: " .. tablelen(ImageList));
 loadImages(ImageList);
 ResMan:dumpResourceList();
-print(" -- determinging geometry...");
+print(" -- determining geometry...");
 command = "montage -geometry +0+0";
 
 for i = 0, tablelen(ImageList) do
@@ -86,7 +86,7 @@ for i = 0, tablelen(ImageList) do
 	end
 end
 command = command .. " spriteSheet.png";
-print(command);
+--print(command);
 os.execute(command);
 
 width, height = ResMan:getImageInfo(ImageList[0]);
@@ -130,3 +130,5 @@ if TAMLOut ~= nil then
 	TAMLOut:flush();
 	TAMLOut:close();
 end
+
+print(" -- done");
