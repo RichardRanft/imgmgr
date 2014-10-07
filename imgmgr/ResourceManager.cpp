@@ -15,6 +15,10 @@ CResourceManager::~CResourceManager()
 	{
 		m_AssetList->clear();
 	}
+	if (m_resFactory != nullptr)
+	{
+		delete(m_resFactory);
+	}
 }
 
 // internal interface
@@ -105,14 +109,12 @@ int CResourceManager::dumpResourceList(lua_State* L)
 	int count = 0;
 	if (m_AssetList != nullptr)
 	{
-		string tempname;
 		lua_newtable(L);
 		for (unordered_map<string, CResourceInstance*>::iterator it = m_AssetList->begin(); it != m_AssetList->end(); it++)
 		{
-			tempname = (*it).first;
 			//cout << " ** asset " << count << " : " << tempname << " dumped" << endl;
 			lua_pushnumber(L, count++);
-			lua_pushstring(L, (char*)tempname.c_str());
+			lua_pushstring(L, (char*)(*it).first.c_str());
 			lua_settable(L, -3);
 		}
 	}

@@ -76,7 +76,12 @@ end
 ImageList = createImageList();
 print(" -- image list length: " .. tablelen(ImageList));
 loadImages(ImageList);
-ResMan:dumpResourceList();
+
+resdump = ResMan:dumpResourceList();
+for i = 0, tablelen(resdump) do
+	
+end
+
 print(" -- determining geometry...");
 command = "montage -geometry +0+0";
 
