@@ -133,12 +133,11 @@ void CApplication::registerLuaClasses()
 }
 
 /// <summary>
-/// Takes a fully qualified path as input and returns the file name if
-/// it is a Lua script file.
+/// Takes a fully qualified path as input and returns the file name if it is a Lua script file.
 /// </summary>
-/// <param name="str">char* string containing the file path.</param>
-/// <param name="dest">string& reference to a string that will hold the result.</param>
-/// <param name="delim">const char* string containing the token delimiter.</param>
+/// <param name="str">char string containing the file path.</param>
+/// <param name="dest">reference to a string that will hold the result.</param>
+/// <param name="delim">const char string pointer containing the token delimiter.</param>
 void CApplication::getScriptFileName(char* str, string& dest, const char* delim)
 {
 	char* nextTok;
@@ -168,7 +167,7 @@ void CApplication::getScriptFileName(char* str, string& dest, const char* delim)
 /// Uses the DOS dir command to get a list of files in a specified folder
 /// </summary>
 /// <param name="dirName">string* string containing the file path.</param>
-/// <param name="target">vector<string*>* pointer to a vector of strings that will hold the result.</param>
+/// <param name="target">vector(string*)* pointer to a vector of strings that will hold the result.</param>
 bool CApplication::getFileList(string *dirName, vector<string*>* target)
 {
 	char psBuffer[128];
