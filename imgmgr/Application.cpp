@@ -132,6 +132,13 @@ void CApplication::registerLuaClasses()
 	Luna<CResourceManager>::Register(m_luaState);
 }
 
+/// <summary>
+/// Takes a fully qualified path as input and returns the file name if
+/// it is a Lua script file.
+/// </summary>
+/// <param name="str">char* string containing the file path.</param>
+/// <param name="dest">string& reference to a string that will hold the result.</param>
+/// <param name="delim">const char* string containing the token delimiter.</param>
 void CApplication::getScriptFileName(char* str, string& dest, const char* delim)
 {
 	char* nextTok;
@@ -157,6 +164,11 @@ void CApplication::getScriptFileName(char* str, string& dest, const char* delim)
 	dest = result.c_str();
 }
 
+/// <summary>
+/// Uses the DOS dir command to get a list of files in a specified folder
+/// </summary>
+/// <param name="dirName">string* string containing the file path.</param>
+/// <param name="target">vector<string*>* pointer to a vector of strings that will hold the result.</param>
 bool CApplication::getFileList(string *dirName, vector<string*>* target)
 {
 	char psBuffer[128];
@@ -186,6 +198,11 @@ bool CApplication::getFileList(string *dirName, vector<string*>* target)
 	return false;
 }
 
+/// <summary>
+/// Execute a Lua script file.
+/// </summary>
+/// <param name="L">lua_State* Lua state that will execute the script.</param>
+/// <param name="filename">string containing the name of the script file to execute.</param>
 bool CApplication::runScript(lua_State* L, string filename)
 {
 	string dOut = m_debugOut->composeMessage(3, " -- Running ", filename.c_str(), "\n");
@@ -200,6 +217,12 @@ bool CApplication::runScript(lua_State* L, string filename)
 	return result;
 }
 
+/// <summary>
+/// Execute a Lua script, passing in parameters to the script.
+/// </summary>
+/// <param name="L">lua_State* Lua state that will execute the script.</param>
+/// <param name="argCount">int containing the number of arguments.</param>
+/// <param name="args">const char** containing the arguments.</param>
 bool CApplication::runScript(lua_State* L, int argCount, const char** args)
 {
 	lua_pushinteger(L, argCount);  /* 1st argument */
