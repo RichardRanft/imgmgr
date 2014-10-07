@@ -62,22 +62,22 @@ public:
 	@ Register
 	Arguments:
 	* L - Lua State
-	* namespac - Namespace to load into
+	* lua_namespace - Namespace to load into
 
 	Description:
-	Registers your class with Lua.  Leave namespac "" if you want to load it into the global space.
+	Registers your class with Lua.  Leave lua_namespace "" if you want to load it into the global space.
 	*/
 	// REGISTER CLASS AS A GLOBAL TABLE 
-	static void Register(lua_State * L, const char *namespac = NULL) {
+	static void Register(lua_State * L, const char *lua_namespace = NULL) {
 
-		if (namespac && strlen(namespac))
+		if (lua_namespace && strlen(lua_namespace))
 		{
-			lua_getglobal(L, namespac);
+			lua_getglobal(L, lua_namespace);
 			if (lua_isnil(L, -1)) // Create namespace if not present
 			{
 				lua_newtable(L);
 				lua_pushvalue(L, -1); // Duplicate table pointer since setglobal pops the value
-				lua_setglobal(L, namespac);
+				lua_setglobal(L, lua_namespace);
 			}
 			lua_pushcfunction(L, &Luna < T >::constructor);
 			lua_setfield(L, -2, T::className);
