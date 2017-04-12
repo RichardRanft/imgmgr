@@ -169,7 +169,7 @@ bool CPNGFile::loadAsset(string& fileName)
 			NULL,                        // compression_type
 			NULL);                       // filter_type
 
-		m_fileName = fileName.c_str();
+		m_fileName = std::string(fileName.c_str());
 
 		m_properties.m_height = height;
 		m_properties.m_width = width;

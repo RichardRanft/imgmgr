@@ -6,10 +6,13 @@ end
 
 print(" -- Creating resource manager");
 ResMan = CResourceManager();
-print(" -- Loading image.");
-reelImage = ResMan:loadImage("reel.png");
-if reelImage == nil then
+
+local imagename = "find.png";
+
+print(" -- Loading image " .. imagename .. ".");
+findImage = ResMan:loadImage(imagename);
+if findImage == nil then
 	print(" -- image not loaded");
 end
-width, height, size = ResMan:getImageInfo("reel.png");
+width, height, size = ResMan:getImageInfo(imagename);
 print(" -- image data: width " .. width .. ", height " .. height .. ", size " .. size); 

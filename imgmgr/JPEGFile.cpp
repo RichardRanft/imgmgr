@@ -69,10 +69,9 @@ bool CJPEGFile::openFileStream(string& fileName)
 
 bool CJPEGFile::loadAsset(string& fileName)
 {
+	m_fileName = std::string(fileName);
 	openFileStream(fileName);
-	scan_JPEG_header(0, 0);
-	m_properties.m_height = 0;
-	m_properties.m_width = 0;
+	scan_JPEG_header(1, 0);
 	m_properties.m_size = (int)getFileSize(m_fileName);
 	return false;
 }
@@ -296,10 +295,10 @@ void CJPEGFile::process_SOFn(INT32 marker)
 
 	printf("JPEG image is %uw * %uh, %d color components, %d bits per sample\n",
 		image_width, image_height, num_components, data_precision);
+
 	// scrape image dimensions for our utility's use
 	m_properties.m_width = image_width;
 	m_properties.m_height = image_height;
-	m_properties.m_size = 0;
 
 	printf("JPEG process: %s\n", process);
 

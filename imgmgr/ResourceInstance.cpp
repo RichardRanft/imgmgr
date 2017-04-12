@@ -34,7 +34,7 @@ std::streampos CResourceInstance::getFileSize(string& fileName)
 
 	static_assert(sizeof(fsize) >= sizeof(long long), "Oops.");
 
-	cout << "size is: " << fsize << " bytes.\n";
+	//cout << "size is: " << fsize << " bytes.\n";
 	return fsize;
 }
 
