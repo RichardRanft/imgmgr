@@ -29,6 +29,7 @@ public:
 
 	virtual SImageProperties getImageSize();
 	virtual bool loadAsset(string& fileName);
+	virtual std::streampos getFileSize(string& fileName);
 
 	PROPERTY_GET_SET(CResourceInstance, Filename, const string&);
 	PROPERTY_GET(CResourceInstance, ImageProperties, const SImageProperties&);

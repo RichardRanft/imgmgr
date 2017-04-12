@@ -71,6 +71,9 @@ bool CJPEGFile::loadAsset(string& fileName)
 {
 	openFileStream(fileName);
 	scan_JPEG_header(0, 0);
+	m_properties.m_height = 0;
+	m_properties.m_width = 0;
+	m_properties.m_size = (int)getFileSize(m_fileName);
 	return false;
 }
 

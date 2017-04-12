@@ -1,3 +1,5 @@
+-- This script requires ImageMagick to create a spritesheet from individual images.
+-- If it is not present on the host this script will fail.
 function tablelen(T)
 	local count = 0;
 	for _ in pairs(T) do count = count + 1 end

@@ -173,7 +173,7 @@ bool CPNGFile::loadAsset(string& fileName)
 
 		m_properties.m_height = height;
 		m_properties.m_width = width;
-		m_properties.m_size = 0;
+		m_properties.m_size = (int)getFileSize(m_fileName);
 	}
 	m_filePointer->close();
 	return true;

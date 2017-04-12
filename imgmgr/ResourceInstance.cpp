@@ -19,6 +19,25 @@ bool CResourceInstance::loadAsset(string& fileName)
 	return false;
 }
 
+std::streampos CResourceInstance::getFileSize(string& fileName)
+{
+
+	std::streampos fsize = 0;
+
+	std::ifstream myfile(fileName.c_str(), ios::in);  // File is of type const char*
+
+	fsize = myfile.tellg();         // The file pointer is currently at the beginning
+	myfile.seekg(0, ios::end);      // Place the file pointer at the end of file
+
+	fsize = myfile.tellg() - fsize;
+	myfile.close();
+
+	static_assert(sizeof(fsize) >= sizeof(long long), "Oops.");
+
+	cout << "size is: " << fsize << " bytes.\n";
+	return fsize;
+}
+
 void CResourceInstance::refreshAsset()
 {
 	// invalidate the current PNG file and initialize the new file.
